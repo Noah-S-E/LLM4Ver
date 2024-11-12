@@ -1,0 +1,331 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/zw/data/vivado_sim/vivado_sim/vivado_project/data/cells_verific.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module VERIFIC_FADD
+INFO: [VRFC 10-311] analyzing module VERIFIC_DFFRS
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/zw/data/vivado_sim/vivado_sim/vivado_project/data/cells_xilinx_7.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IBUF
+INFO: [VRFC 10-311] analyzing module OBUF
+INFO: [VRFC 10-311] analyzing module OBUFT
+INFO: [VRFC 10-311] analyzing module GND
+INFO: [VRFC 10-311] analyzing module INV
+INFO: [VRFC 10-311] analyzing module LUT1
+INFO: [VRFC 10-311] analyzing module LUT2
+INFO: [VRFC 10-311] analyzing module LUT3
+INFO: [VRFC 10-311] analyzing module LUT4
+INFO: [VRFC 10-311] analyzing module LUT5
+INFO: [VRFC 10-311] analyzing module LUT6
+INFO: [VRFC 10-311] analyzing module MUXCY
+INFO: [VRFC 10-311] analyzing module MUXF7
+INFO: [VRFC 10-311] analyzing module MUXF8
+INFO: [VRFC 10-311] analyzing module VCC
+INFO: [VRFC 10-311] analyzing module XORCY
+INFO: [VRFC 10-311] analyzing module CARRY4
+INFO: [VRFC 10-311] analyzing module FD_1
+INFO: [VRFC 10-311] analyzing module FDC_1
+INFO: [VRFC 10-311] analyzing module FDCE_1
+INFO: [VRFC 10-311] analyzing module FDCE
+INFO: [VRFC 10-311] analyzing module FDCP_1
+INFO: [VRFC 10-311] analyzing module FDCPE_1
+INFO: [VRFC 10-311] analyzing module FDCPE
+INFO: [VRFC 10-311] analyzing module FDCP
+INFO: [VRFC 10-311] analyzing module FDC
+INFO: [VRFC 10-311] analyzing module FDDRCPE
+INFO: [VRFC 10-311] analyzing module FDDRRSE
+INFO: [VRFC 10-311] analyzing module FDE_1
+INFO: [VRFC 10-311] analyzing module FDE
+INFO: [VRFC 10-311] analyzing module FDP_1
+INFO: [VRFC 10-311] analyzing module FDPE_1
+INFO: [VRFC 10-311] analyzing module FDPE
+INFO: [VRFC 10-311] analyzing module FDP
+INFO: [VRFC 10-311] analyzing module FDR_1
+INFO: [VRFC 10-311] analyzing module FDRE_1
+INFO: [VRFC 10-311] analyzing module FDRE
+INFO: [VRFC 10-311] analyzing module FDRS_1
+INFO: [VRFC 10-311] analyzing module FDRSE_1
+INFO: [VRFC 10-311] analyzing module FDRSE
+INFO: [VRFC 10-311] analyzing module FDRS
+INFO: [VRFC 10-311] analyzing module FDR
+INFO: [VRFC 10-311] analyzing module FDS_1
+INFO: [VRFC 10-311] analyzing module FDSE_1
+INFO: [VRFC 10-311] analyzing module FDSE
+INFO: [VRFC 10-311] analyzing module FDS
+INFO: [VRFC 10-311] analyzing module FD
+INFO: [VRFC 10-311] analyzing module LD_1
+INFO: [VRFC 10-311] analyzing module LDC_1
+INFO: [VRFC 10-311] analyzing module LDCE_1
+INFO: [VRFC 10-311] analyzing module LDCE
+INFO: [VRFC 10-311] analyzing module LDCP_1
+INFO: [VRFC 10-311] analyzing module LDCPE_1
+INFO: [VRFC 10-311] analyzing module LDCPE
+INFO: [VRFC 10-311] analyzing module LDCP
+INFO: [VRFC 10-311] analyzing module LDC
+INFO: [VRFC 10-311] analyzing module LDE_1
+INFO: [VRFC 10-311] analyzing module LDE
+INFO: [VRFC 10-311] analyzing module LDP_1
+INFO: [VRFC 10-311] analyzing module LDPE_1
+INFO: [VRFC 10-311] analyzing module LDPE
+INFO: [VRFC 10-311] analyzing module LDP
+INFO: [VRFC 10-311] analyzing module LD
+INFO: [VRFC 10-311] analyzing module BUFCF
+INFO: [VRFC 10-311] analyzing module BUFE
+INFO: [VRFC 10-311] analyzing module BUFGCE_1
+INFO: [VRFC 10-311] analyzing module BUFGCE
+INFO: [VRFC 10-311] analyzing module BUFGCTRL
+INFO: [VRFC 10-311] analyzing module BUFG_LB
+INFO: [VRFC 10-311] analyzing module BUFGMUX_1
+INFO: [VRFC 10-311] analyzing module BUFGMUX_CTRL
+INFO: [VRFC 10-311] analyzing module BUFGMUX
+INFO: [VRFC 10-311] analyzing module BUFGMUX_VIRTEX4
+INFO: [VRFC 10-311] analyzing module BUFGP
+INFO: [VRFC 10-311] analyzing module BUFG
+INFO: [VRFC 10-311] analyzing module BUFHCE
+INFO: [VRFC 10-311] analyzing module BUFH
+INFO: [VRFC 10-311] analyzing module BUFIO2FB
+INFO: [VRFC 10-311] analyzing module BUFIODQS
+INFO: [VRFC 10-311] analyzing module BUFIO
+INFO: [VRFC 10-311] analyzing module BUFMRCE
+INFO: [VRFC 10-311] analyzing module BUFMR
+INFO: [VRFC 10-311] analyzing module BUFT
+INFO: [VRFC 10-311] analyzing module BUF
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/zw/data/vivado_sim/vivado_sim/vivado_project/data/cells_cmos.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module NOT
+INFO: [VRFC 10-311] analyzing module NAND
+INFO: [VRFC 10-311] analyzing module NOR
+INFO: [VRFC 10-311] analyzing module DFF
+INFO: [VRFC 10-311] analyzing module DFFSR
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/zw/data/vivado_sim/vivado_sim/vivado_project/data/cells_cyclone_v.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dffeas
+INFO: [VRFC 10-311] analyzing module cyclonev_lcell_comb
+INFO: [VRFC 10-311] analyzing module cyclonev_clkena
+INFO: [VRFC 10-311] analyzing module cyclonev_io_ibuf
+INFO: [VRFC 10-311] analyzing module cyclonev_io_obuf
+INFO: [VRFC 10-311] analyzing module cyclone10lp_lcell_comb
+INFO: [VRFC 10-311] analyzing module cyclone10lp_io_ibuf
+INFO: [VRFC 10-311] analyzing module cyclone10lp_io_obuf
+INFO: [VRFC 10-311] analyzing module cyclone10lp_clkena
+INFO: [VRFC 10-311] analyzing module cyclone10gx_lcell_comb
+INFO: [VRFC 10-311] analyzing module cyclone10gx_io_ibuf
+INFO: [VRFC 10-311] analyzing module cyclone10gx_io_obuf
+INFO: [VRFC 10-311] analyzing module cyclone10gx_clkena
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/zw/data/vivado_sim/vivado_sim/vivado_project/data/cells_yosys.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module $_DLATCH_N_
+INFO: [VRFC 10-311] analyzing module $_DLATCH_P_
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/zw/data/vivado_sim/vivado_sim/vivado_project/vivado_sim_test/sim.srcs/sources_1/imports/vivado_project/syn_vivado.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/zw/data/vivado_sim/vivado_sim/vivado_project/vivado_sim_test/sim.srcs/sim_1/imports/vivado_project/vivado_testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module NOT
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'NOT' [../../../../../data/../data/cells_cmos.v:2]
+INFO: [VRFC 10-311] analyzing module NAND
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'NAND' [../../../../../data/../data/cells_cmos.v:8]
+INFO: [VRFC 10-311] analyzing module NOR
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'NOR' [../../../../../data/../data/cells_cmos.v:14]
+INFO: [VRFC 10-311] analyzing module DFF
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'DFF' [../../../../../data/../data/cells_cmos.v:20]
+INFO: [VRFC 10-311] analyzing module DFFSR
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'DFFSR' [../../../../../data/../data/cells_cmos.v:27]
+INFO: [VRFC 10-311] analyzing module dffeas
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'dffeas' [../../../../../data/../data/cells_cyclone_v.v:5]
+INFO: [VRFC 10-311] analyzing module cyclonev_lcell_comb
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'cyclonev_lcell_comb' [../../../../../data/../data/cells_cyclone_v.v:45]
+INFO: [VRFC 10-311] analyzing module cyclonev_clkena
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'cyclonev_clkena' [../../../../../data/../data/cells_cyclone_v.v:198]
+INFO: [VRFC 10-311] analyzing module cyclonev_io_ibuf
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'cyclonev_io_ibuf' [../../../../../data/../data/cells_cyclone_v.v:226]
+INFO: [VRFC 10-311] analyzing module cyclonev_io_obuf
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'cyclonev_io_obuf' [../../../../../data/../data/cells_cyclone_v.v:244]
+INFO: [VRFC 10-311] analyzing module cyclone10lp_lcell_comb
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'cyclone10lp_lcell_comb' [../../../../../data/../data/cells_cyclone_v.v:265]
+INFO: [VRFC 10-311] analyzing module cyclone10lp_io_ibuf
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'cyclone10lp_io_ibuf' [../../../../../data/../data/cells_cyclone_v.v:420]
+INFO: [VRFC 10-311] analyzing module cyclone10lp_io_obuf
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'cyclone10lp_io_obuf' [../../../../../data/../data/cells_cyclone_v.v:438]
+INFO: [VRFC 10-311] analyzing module cyclone10lp_clkena
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'cyclone10lp_clkena' [../../../../../data/../data/cells_cyclone_v.v:459]
+INFO: [VRFC 10-311] analyzing module cyclone10gx_lcell_comb
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'cyclone10gx_lcell_comb' [../../../../../data/../data/cells_cyclone_v.v:484]
+INFO: [VRFC 10-311] analyzing module cyclone10gx_io_ibuf
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'cyclone10gx_io_ibuf' [../../../../../data/../data/cells_cyclone_v.v:639]
+INFO: [VRFC 10-311] analyzing module cyclone10gx_io_obuf
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'cyclone10gx_io_obuf' [../../../../../data/../data/cells_cyclone_v.v:657]
+INFO: [VRFC 10-311] analyzing module cyclone10gx_clkena
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'cyclone10gx_clkena' [../../../../../data/../data/cells_cyclone_v.v:678]
+INFO: [VRFC 10-311] analyzing module VERIFIC_FADD
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'VERIFIC_FADD' [../../../../../data/../data/cells_verific.v:1]
+INFO: [VRFC 10-311] analyzing module VERIFIC_DFFRS
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'VERIFIC_DFFRS' [../../../../../data/../data/cells_verific.v:7]
+INFO: [VRFC 10-311] analyzing module IBUF
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'IBUF' [../../../../../data/../data/cells_xilinx_7.v:3]
+INFO: [VRFC 10-311] analyzing module OBUF
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'OBUF' [../../../../../data/../data/cells_xilinx_7.v:9]
+INFO: [VRFC 10-311] analyzing module OBUFT
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'OBUFT' [../../../../../data/../data/cells_xilinx_7.v:15]
+INFO: [VRFC 10-311] analyzing module GND
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'GND' [../../../../../data/../data/cells_xilinx_7.v:21]
+INFO: [VRFC 10-311] analyzing module INV
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'INV' [../../../../../data/../data/cells_xilinx_7.v:26]
+INFO: [VRFC 10-311] analyzing module LUT1
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'LUT1' [../../../../../data/../data/cells_xilinx_7.v:32]
+INFO: [VRFC 10-311] analyzing module LUT2
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'LUT2' [../../../../../data/../data/cells_xilinx_7.v:41]
+INFO: [VRFC 10-311] analyzing module LUT3
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'LUT3' [../../../../../data/../data/cells_xilinx_7.v:50]
+INFO: [VRFC 10-311] analyzing module LUT4
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'LUT4' [../../../../../data/../data/cells_xilinx_7.v:59]
+INFO: [VRFC 10-311] analyzing module LUT5
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'LUT5' [../../../../../data/../data/cells_xilinx_7.v:68]
+INFO: [VRFC 10-311] analyzing module LUT6
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'LUT6' [../../../../../data/../data/cells_xilinx_7.v:77]
+INFO: [VRFC 10-311] analyzing module MUXCY
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'MUXCY' [../../../../../data/../data/cells_xilinx_7.v:86]
+INFO: [VRFC 10-311] analyzing module MUXF7
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'MUXF7' [../../../../../data/../data/cells_xilinx_7.v:92]
+INFO: [VRFC 10-311] analyzing module MUXF8
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'MUXF8' [../../../../../data/../data/cells_xilinx_7.v:98]
+INFO: [VRFC 10-311] analyzing module VCC
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'VCC' [../../../../../data/../data/cells_xilinx_7.v:104]
+INFO: [VRFC 10-311] analyzing module XORCY
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'XORCY' [../../../../../data/../data/cells_xilinx_7.v:109]
+INFO: [VRFC 10-311] analyzing module CARRY4
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'CARRY4' [../../../../../data/../data/cells_xilinx_7.v:115]
+INFO: [VRFC 10-311] analyzing module FD_1
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'FD_1' [../../../../../data/../data/cells_xilinx_7.v:128]
+INFO: [VRFC 10-311] analyzing module FDC_1
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'FDC_1' [../../../../../data/../data/cells_xilinx_7.v:140]
+INFO: [VRFC 10-311] analyzing module FDCE_1
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'FDCE_1' [../../../../../data/../data/cells_xilinx_7.v:155]
+INFO: [VRFC 10-311] analyzing module FDCE
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'FDCE' [../../../../../data/../data/cells_xilinx_7.v:171]
+INFO: [VRFC 10-311] analyzing module FDCP_1
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'FDCP_1' [../../../../../data/../data/cells_xilinx_7.v:187]
+INFO: [VRFC 10-311] analyzing module FDCPE_1
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'FDCPE_1' [../../../../../data/../data/cells_xilinx_7.v:204]
+INFO: [VRFC 10-311] analyzing module FDCPE
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'FDCPE' [../../../../../data/../data/cells_xilinx_7.v:222]
+INFO: [VRFC 10-311] analyzing module FDCP
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'FDCP' [../../../../../data/../data/cells_xilinx_7.v:240]
+INFO: [VRFC 10-311] analyzing module FDC
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'FDC' [../../../../../data/../data/cells_xilinx_7.v:257]
+INFO: [VRFC 10-311] analyzing module FDDRCPE
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'FDDRCPE' [../../../../../data/../data/cells_xilinx_7.v:272]
+INFO: [VRFC 10-311] analyzing module FDDRRSE
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'FDDRRSE' [../../../../../data/../data/cells_xilinx_7.v:320]
+INFO: [VRFC 10-311] analyzing module FDE_1
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'FDE_1' [../../../../../data/../data/cells_xilinx_7.v:367]
+INFO: [VRFC 10-311] analyzing module FDE
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'FDE' [../../../../../data/../data/cells_xilinx_7.v:380]
+INFO: [VRFC 10-311] analyzing module FDP_1
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'FDP_1' [../../../../../data/../data/cells_xilinx_7.v:393]
+INFO: [VRFC 10-311] analyzing module FDPE_1
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'FDPE_1' [../../../../../data/../data/cells_xilinx_7.v:408]
+INFO: [VRFC 10-311] analyzing module FDPE
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'FDPE' [../../../../../data/../data/cells_xilinx_7.v:424]
+INFO: [VRFC 10-311] analyzing module FDP
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'FDP' [../../../../../data/../data/cells_xilinx_7.v:440]
+INFO: [VRFC 10-311] analyzing module FDR_1
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'FDR_1' [../../../../../data/../data/cells_xilinx_7.v:455]
+INFO: [VRFC 10-311] analyzing module FDRE_1
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'FDRE_1' [../../../../../data/../data/cells_xilinx_7.v:470]
+INFO: [VRFC 10-311] analyzing module FDRE
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'FDRE' [../../../../../data/../data/cells_xilinx_7.v:485]
+INFO: [VRFC 10-311] analyzing module FDRS_1
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'FDRS_1' [../../../../../data/../data/cells_xilinx_7.v:500]
+INFO: [VRFC 10-311] analyzing module FDRSE_1
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'FDRSE_1' [../../../../../data/../data/cells_xilinx_7.v:517]
+INFO: [VRFC 10-311] analyzing module FDRSE
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'FDRSE' [../../../../../data/../data/cells_xilinx_7.v:534]
+INFO: [VRFC 10-311] analyzing module FDRS
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'FDRS' [../../../../../data/../data/cells_xilinx_7.v:551]
+INFO: [VRFC 10-311] analyzing module FDR
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'FDR' [../../../../../data/../data/cells_xilinx_7.v:568]
+INFO: [VRFC 10-311] analyzing module FDS_1
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'FDS_1' [../../../../../data/../data/cells_xilinx_7.v:583]
+INFO: [VRFC 10-311] analyzing module FDSE_1
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'FDSE_1' [../../../../../data/../data/cells_xilinx_7.v:598]
+INFO: [VRFC 10-311] analyzing module FDSE
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'FDSE' [../../../../../data/../data/cells_xilinx_7.v:613]
+INFO: [VRFC 10-311] analyzing module FDS
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'FDS' [../../../../../data/../data/cells_xilinx_7.v:628]
+INFO: [VRFC 10-311] analyzing module FD
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'FD' [../../../../../data/../data/cells_xilinx_7.v:643]
+INFO: [VRFC 10-311] analyzing module LD_1
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'LD_1' [../../../../../data/../data/cells_xilinx_7.v:656]
+INFO: [VRFC 10-311] analyzing module LDC_1
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'LDC_1' [../../../../../data/../data/cells_xilinx_7.v:669]
+INFO: [VRFC 10-311] analyzing module LDCE_1
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'LDCE_1' [../../../../../data/../data/cells_xilinx_7.v:684]
+INFO: [VRFC 10-311] analyzing module LDCE
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'LDCE' [../../../../../data/../data/cells_xilinx_7.v:699]
+INFO: [VRFC 10-311] analyzing module LDCP_1
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'LDCP_1' [../../../../../data/../data/cells_xilinx_7.v:714]
+INFO: [VRFC 10-311] analyzing module LDCPE_1
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'LDCPE_1' [../../../../../data/../data/cells_xilinx_7.v:731]
+INFO: [VRFC 10-311] analyzing module LDCPE
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'LDCPE' [../../../../../data/../data/cells_xilinx_7.v:748]
+INFO: [VRFC 10-311] analyzing module LDCP
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'LDCP' [../../../../../data/../data/cells_xilinx_7.v:765]
+INFO: [VRFC 10-311] analyzing module LDC
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'LDC' [../../../../../data/../data/cells_xilinx_7.v:782]
+INFO: [VRFC 10-311] analyzing module LDE_1
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'LDE_1' [../../../../../data/../data/cells_xilinx_7.v:797]
+INFO: [VRFC 10-311] analyzing module LDE
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'LDE' [../../../../../data/../data/cells_xilinx_7.v:810]
+INFO: [VRFC 10-311] analyzing module LDP_1
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'LDP_1' [../../../../../data/../data/cells_xilinx_7.v:823]
+INFO: [VRFC 10-311] analyzing module LDPE_1
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'LDPE_1' [../../../../../data/../data/cells_xilinx_7.v:838]
+INFO: [VRFC 10-311] analyzing module LDPE
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'LDPE' [../../../../../data/../data/cells_xilinx_7.v:853]
+INFO: [VRFC 10-311] analyzing module LDP
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'LDP' [../../../../../data/../data/cells_xilinx_7.v:868]
+INFO: [VRFC 10-311] analyzing module LD
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'LD' [../../../../../data/../data/cells_xilinx_7.v:883]
+INFO: [VRFC 10-311] analyzing module BUFCF
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'BUFCF' [../../../../../data/../data/cells_xilinx_7.v:897]
+INFO: [VRFC 10-311] analyzing module BUFE
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'BUFE' [../../../../../data/../data/cells_xilinx_7.v:903]
+INFO: [VRFC 10-311] analyzing module BUFGCE_1
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'BUFGCE_1' [../../../../../data/../data/cells_xilinx_7.v:909]
+INFO: [VRFC 10-311] analyzing module BUFGCE
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'BUFGCE' [../../../../../data/../data/cells_xilinx_7.v:921]
+INFO: [VRFC 10-311] analyzing module BUFGCTRL
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'BUFGCTRL' [../../../../../data/../data/cells_xilinx_7.v:933]
+INFO: [VRFC 10-311] analyzing module BUFG_LB
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'BUFG_LB' [../../../../../data/../data/cells_xilinx_7.v:974]
+INFO: [VRFC 10-311] analyzing module BUFGMUX_1
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'BUFGMUX_1' [../../../../../data/../data/cells_xilinx_7.v:983]
+INFO: [VRFC 10-311] analyzing module BUFGMUX_CTRL
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'BUFGMUX_CTRL' [../../../../../data/../data/cells_xilinx_7.v:1016]
+INFO: [VRFC 10-311] analyzing module BUFGMUX
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'BUFGMUX' [../../../../../data/../data/cells_xilinx_7.v:1027]
+INFO: [VRFC 10-311] analyzing module BUFGMUX_VIRTEX4
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'BUFGMUX_VIRTEX4' [../../../../../data/../data/cells_xilinx_7.v:1060]
+INFO: [VRFC 10-311] analyzing module BUFGP
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'BUFGP' [../../../../../data/../data/cells_xilinx_7.v:1071]
+INFO: [VRFC 10-311] analyzing module BUFG
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'BUFG' [../../../../../data/../data/cells_xilinx_7.v:1077]
+INFO: [VRFC 10-311] analyzing module BUFHCE
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'BUFHCE' [../../../../../data/../data/cells_xilinx_7.v:1083]
+INFO: [VRFC 10-311] analyzing module BUFH
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'BUFH' [../../../../../data/../data/cells_xilinx_7.v:1107]
+INFO: [VRFC 10-311] analyzing module BUFIO2FB
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'BUFIO2FB' [../../../../../data/../data/cells_xilinx_7.v:1114]
+INFO: [VRFC 10-311] analyzing module BUFIODQS
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'BUFIODQS' [../../../../../data/../data/cells_xilinx_7.v:1129]
+INFO: [VRFC 10-311] analyzing module BUFIO
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'BUFIO' [../../../../../data/../data/cells_xilinx_7.v:1159]
+INFO: [VRFC 10-311] analyzing module BUFMRCE
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'BUFMRCE' [../../../../../data/../data/cells_xilinx_7.v:1165]
+INFO: [VRFC 10-311] analyzing module BUFMR
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'BUFMR' [../../../../../data/../data/cells_xilinx_7.v:1198]
+INFO: [VRFC 10-311] analyzing module BUFT
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'BUFT' [../../../../../data/../data/cells_xilinx_7.v:1207]
+INFO: [VRFC 10-311] analyzing module BUF
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'BUF' [../../../../../data/../data/cells_xilinx_7.v:1213]
+INFO: [VRFC 10-311] analyzing module $_DLATCH_N_
+WARNING: [VRFC 10-3609] overwriting previous definition of module '$_DLATCH_N_' [../../../../../data/../data/cells_yosys.v:3]
+INFO: [VRFC 10-311] analyzing module $_DLATCH_P_
+WARNING: [VRFC 10-3609] overwriting previous definition of module '$_DLATCH_P_' [../../../../../data/../data/cells_yosys.v:12]
+INFO: [VRFC 10-311] analyzing module top
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'top' [../../../../sim.srcs/sources_1/imports/vivado_project/syn_vivado.v:17]
+INFO: [VRFC 10-311] analyzing module testbench
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/zw/data/vivado_sim/vivado_sim/vivado_project/vivado_sim_test/sim.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

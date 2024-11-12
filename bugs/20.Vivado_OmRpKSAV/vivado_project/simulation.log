@@ -1,0 +1,653 @@
+
+****** Vivado v2023.2 (64-bit)
+  **** SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+  **** IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+  **** SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source vivado.tcl
+# read_verilog rtl.v
+# synth_design -top top
+Command: synth_design -top top
+Starting synth_design
+Using part: xc7k70tfbv676-1
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 290262
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1701.109 ; gain = 378.773 ; free physical = 3358 ; free virtual = 9733
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [/home/zw/data/vivado_sim/vivado_sim/vivado_project/rtl.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'top' (0#1) [/home/zw/data/vivado_sim/vivado_sim/vivado_project/rtl.v:1]
+WARNING: [Synth 8-3917] design top has port y[9] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[8] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[7] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[6] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[5] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[4] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[3] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1] driven by constant 0
+WARNING: [Synth 8-7129] Port clk[0] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire3[2] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire3[1] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire3[0] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire2[5] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire2[4] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire2[3] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire2[2] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire2[1] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire2[0] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire0[5] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire0[4] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire0[3] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire0[2] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire0[1] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire0[0] in module top is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1776.078 ; gain = 453.742 ; free physical = 3262 ; free virtual = 9637
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1793.891 ; gain = 471.555 ; free physical = 3262 ; free virtual = 9637
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k70tfbv676-1
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7k70tfbv676-1
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1801.895 ; gain = 479.559 ; free physical = 3261 ; free virtual = 9636
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-327] inferring latch for variable 'forvar7' [/home/zw/data/vivado_sim/vivado_sim/vivado_project/rtl.v:12]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1810.801 ; gain = 488.465 ; free physical = 3252 ; free virtual = 9628
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---XORs : 
+	                6 Bit    Wide XORs := 1     
++---Muxes : 
+	   2 Input    6 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3917] design top has port y[9] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[8] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[7] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[6] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[5] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[4] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[3] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1] driven by constant 0
+WARNING: [Synth 8-7129] Port clk[0] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire3[2] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire3[1] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire3[0] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire2[5] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire2[4] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire2[3] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire2[2] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire2[1] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire2[0] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire0[5] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire0[4] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire0[3] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire0[2] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire0[1] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire0[0] in module top is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1934.215 ; gain = 611.879 ; free physical = 3123 ; free virtual = 9502
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1934.215 ; gain = 611.879 ; free physical = 3120 ; free virtual = 9499
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1934.215 ; gain = 611.879 ; free physical = 3120 ; free virtual = 9499
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1934.215 ; gain = 611.879 ; free physical = 3120 ; free virtual = 9498
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1934.215 ; gain = 611.879 ; free physical = 3120 ; free virtual = 9498
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1934.215 ; gain = 611.879 ; free physical = 3120 ; free virtual = 9498
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1934.215 ; gain = 611.879 ; free physical = 3120 ; free virtual = 9498
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1934.215 ; gain = 611.879 ; free physical = 3120 ; free virtual = 9498
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1934.215 ; gain = 611.879 ; free physical = 3120 ; free virtual = 9498
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT6 |     1|
+|2     |LD   |     1|
+|3     |IBUF |     6|
+|4     |OBUF |    10|
++------+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |    18|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1934.215 ; gain = 611.879 ; free physical = 3120 ; free virtual = 9498
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 52 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1934.215 ; gain = 611.879 ; free physical = 3120 ; free virtual = 9498
+Synthesis Optimization Complete : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1934.223 ; gain = 611.879 ; free physical = 3120 ; free virtual = 9498
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1941.152 ; gain = 0.000 ; free physical = 3401 ; free virtual = 9779
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2019.809 ; gain = 0.000 ; free physical = 3327 ; free virtual = 9705
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  LD => LDCE: 1 instance 
+
+Synth Design complete | Checksum: 6d24b6ac
+INFO: [Common 17-83] Releasing license: Synthesis
+14 Infos, 52 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:13 . Memory (MB): peak = 2019.844 ; gain = 697.512 ; free physical = 3327 ; free virtual = 9705
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1749.335; main = 1555.741; forked = 428.982
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 2932.512; main = 2019.812; forked = 998.293
+# write_verilog -force syn_vivado.v
+# create_project -force sim ./vivado_sim_test
+# add_files -norecurse syn_vivado.v
+# set_property file_type {Verilog} [get_files syn_vivado.v]
+# set_property is_global_include 1 [get_files syn_vivado.v]
+# add_files -fileset sim_1 -norecurse vivado_testbench.v
+# import_files -force -norecurse
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'sim_1'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'sources_1'
+# set_property top testbench [get_fileset sim_1]
+# set data_files [glob -nocomplain ./data/*.v]
+# foreach file $data_files {
+#     add_files -norecurse $file
+#     set_property file_type {Verilog} [get_files $file]
+#     set_property is_global_include 1 [get_files $file]
+# }
+# launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'testbench'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/zw/data/vivado_sim/vivado_sim/vivado_project/vivado_sim_test/sim.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/home/zw/tools/Vivado/2023.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/zw/data/vivado_sim/vivado_sim/vivado_project/vivado_sim_test/sim.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj testbench_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/zw/data/vivado_sim/vivado_sim/vivado_project/data/cells_verific.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module VERIFIC_FADD
+INFO: [VRFC 10-311] analyzing module VERIFIC_DFFRS
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/zw/data/vivado_sim/vivado_sim/vivado_project/data/cells_xilinx_7.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IBUF
+INFO: [VRFC 10-311] analyzing module OBUF
+INFO: [VRFC 10-311] analyzing module OBUFT
+INFO: [VRFC 10-311] analyzing module GND
+INFO: [VRFC 10-311] analyzing module INV
+INFO: [VRFC 10-311] analyzing module LUT1
+INFO: [VRFC 10-311] analyzing module LUT2
+INFO: [VRFC 10-311] analyzing module LUT3
+INFO: [VRFC 10-311] analyzing module LUT4
+INFO: [VRFC 10-311] analyzing module LUT5
+INFO: [VRFC 10-311] analyzing module LUT6
+INFO: [VRFC 10-311] analyzing module MUXCY
+INFO: [VRFC 10-311] analyzing module MUXF7
+INFO: [VRFC 10-311] analyzing module MUXF8
+INFO: [VRFC 10-311] analyzing module VCC
+INFO: [VRFC 10-311] analyzing module XORCY
+INFO: [VRFC 10-311] analyzing module CARRY4
+INFO: [VRFC 10-311] analyzing module FD_1
+INFO: [VRFC 10-311] analyzing module FDC_1
+INFO: [VRFC 10-311] analyzing module FDCE_1
+INFO: [VRFC 10-311] analyzing module FDCE
+INFO: [VRFC 10-311] analyzing module FDCP_1
+INFO: [VRFC 10-311] analyzing module FDCPE_1
+INFO: [VRFC 10-311] analyzing module FDCPE
+INFO: [VRFC 10-311] analyzing module FDCP
+INFO: [VRFC 10-311] analyzing module FDC
+INFO: [VRFC 10-311] analyzing module FDDRCPE
+INFO: [VRFC 10-311] analyzing module FDDRRSE
+INFO: [VRFC 10-311] analyzing module FDE_1
+INFO: [VRFC 10-311] analyzing module FDE
+INFO: [VRFC 10-311] analyzing module FDP_1
+INFO: [VRFC 10-311] analyzing module FDPE_1
+INFO: [VRFC 10-311] analyzing module FDPE
+INFO: [VRFC 10-311] analyzing module FDP
+INFO: [VRFC 10-311] analyzing module FDR_1
+INFO: [VRFC 10-311] analyzing module FDRE_1
+INFO: [VRFC 10-311] analyzing module FDRE
+INFO: [VRFC 10-311] analyzing module FDRS_1
+INFO: [VRFC 10-311] analyzing module FDRSE_1
+INFO: [VRFC 10-311] analyzing module FDRSE
+INFO: [VRFC 10-311] analyzing module FDRS
+INFO: [VRFC 10-311] analyzing module FDR
+INFO: [VRFC 10-311] analyzing module FDS_1
+INFO: [VRFC 10-311] analyzing module FDSE_1
+INFO: [VRFC 10-311] analyzing module FDSE
+INFO: [VRFC 10-311] analyzing module FDS
+INFO: [VRFC 10-311] analyzing module FD
+INFO: [VRFC 10-311] analyzing module LD_1
+INFO: [VRFC 10-311] analyzing module LDC_1
+INFO: [VRFC 10-311] analyzing module LDCE_1
+INFO: [VRFC 10-311] analyzing module LDCE
+INFO: [VRFC 10-311] analyzing module LDCP_1
+INFO: [VRFC 10-311] analyzing module LDCPE_1
+INFO: [VRFC 10-311] analyzing module LDCPE
+INFO: [VRFC 10-311] analyzing module LDCP
+INFO: [VRFC 10-311] analyzing module LDC
+INFO: [VRFC 10-311] analyzing module LDE_1
+INFO: [VRFC 10-311] analyzing module LDE
+INFO: [VRFC 10-311] analyzing module LDP_1
+INFO: [VRFC 10-311] analyzing module LDPE_1
+INFO: [VRFC 10-311] analyzing module LDPE
+INFO: [VRFC 10-311] analyzing module LDP
+INFO: [VRFC 10-311] analyzing module LD
+INFO: [VRFC 10-311] analyzing module BUFCF
+INFO: [VRFC 10-311] analyzing module BUFE
+INFO: [VRFC 10-311] analyzing module BUFGCE_1
+INFO: [VRFC 10-311] analyzing module BUFGCE
+INFO: [VRFC 10-311] analyzing module BUFGCTRL
+INFO: [VRFC 10-311] analyzing module BUFG_LB
+INFO: [VRFC 10-311] analyzing module BUFGMUX_1
+INFO: [VRFC 10-311] analyzing module BUFGMUX_CTRL
+INFO: [VRFC 10-311] analyzing module BUFGMUX
+INFO: [VRFC 10-311] analyzing module BUFGMUX_VIRTEX4
+INFO: [VRFC 10-311] analyzing module BUFGP
+INFO: [VRFC 10-311] analyzing module BUFG
+INFO: [VRFC 10-311] analyzing module BUFHCE
+INFO: [VRFC 10-311] analyzing module BUFH
+INFO: [VRFC 10-311] analyzing module BUFIO2FB
+INFO: [VRFC 10-311] analyzing module BUFIODQS
+INFO: [VRFC 10-311] analyzing module BUFIO
+INFO: [VRFC 10-311] analyzing module BUFMRCE
+INFO: [VRFC 10-311] analyzing module BUFMR
+INFO: [VRFC 10-311] analyzing module BUFT
+INFO: [VRFC 10-311] analyzing module BUF
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/zw/data/vivado_sim/vivado_sim/vivado_project/data/cells_cmos.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module NOT
+INFO: [VRFC 10-311] analyzing module NAND
+INFO: [VRFC 10-311] analyzing module NOR
+INFO: [VRFC 10-311] analyzing module DFF
+INFO: [VRFC 10-311] analyzing module DFFSR
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/zw/data/vivado_sim/vivado_sim/vivado_project/data/cells_cyclone_v.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dffeas
+INFO: [VRFC 10-311] analyzing module cyclonev_lcell_comb
+INFO: [VRFC 10-311] analyzing module cyclonev_clkena
+INFO: [VRFC 10-311] analyzing module cyclonev_io_ibuf
+INFO: [VRFC 10-311] analyzing module cyclonev_io_obuf
+INFO: [VRFC 10-311] analyzing module cyclone10lp_lcell_comb
+INFO: [VRFC 10-311] analyzing module cyclone10lp_io_ibuf
+INFO: [VRFC 10-311] analyzing module cyclone10lp_io_obuf
+INFO: [VRFC 10-311] analyzing module cyclone10lp_clkena
+INFO: [VRFC 10-311] analyzing module cyclone10gx_lcell_comb
+INFO: [VRFC 10-311] analyzing module cyclone10gx_io_ibuf
+INFO: [VRFC 10-311] analyzing module cyclone10gx_io_obuf
+INFO: [VRFC 10-311] analyzing module cyclone10gx_clkena
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/zw/data/vivado_sim/vivado_sim/vivado_project/data/cells_yosys.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module $_DLATCH_N_
+INFO: [VRFC 10-311] analyzing module $_DLATCH_P_
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/zw/data/vivado_sim/vivado_sim/vivado_project/vivado_sim_test/sim.srcs/sources_1/imports/vivado_project/syn_vivado.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/zw/data/vivado_sim/vivado_sim/vivado_project/vivado_sim_test/sim.srcs/sim_1/imports/vivado_project/vivado_testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module NOT
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'NOT' [../../../../../data/../data/cells_cmos.v:2]
+INFO: [VRFC 10-311] analyzing module NAND
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'NAND' [../../../../../data/../data/cells_cmos.v:8]
+INFO: [VRFC 10-311] analyzing module NOR
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'NOR' [../../../../../data/../data/cells_cmos.v:14]
+INFO: [VRFC 10-311] analyzing module DFF
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'DFF' [../../../../../data/../data/cells_cmos.v:20]
+INFO: [VRFC 10-311] analyzing module DFFSR
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'DFFSR' [../../../../../data/../data/cells_cmos.v:27]
+INFO: [VRFC 10-311] analyzing module dffeas
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'dffeas' [../../../../../data/../data/cells_cyclone_v.v:5]
+INFO: [VRFC 10-311] analyzing module cyclonev_lcell_comb
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'cyclonev_lcell_comb' [../../../../../data/../data/cells_cyclone_v.v:45]
+INFO: [VRFC 10-311] analyzing module cyclonev_clkena
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'cyclonev_clkena' [../../../../../data/../data/cells_cyclone_v.v:198]
+INFO: [VRFC 10-311] analyzing module cyclonev_io_ibuf
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'cyclonev_io_ibuf' [../../../../../data/../data/cells_cyclone_v.v:226]
+INFO: [VRFC 10-311] analyzing module cyclonev_io_obuf
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'cyclonev_io_obuf' [../../../../../data/../data/cells_cyclone_v.v:244]
+INFO: [VRFC 10-311] analyzing module cyclone10lp_lcell_comb
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'cyclone10lp_lcell_comb' [../../../../../data/../data/cells_cyclone_v.v:265]
+INFO: [VRFC 10-311] analyzing module cyclone10lp_io_ibuf
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'cyclone10lp_io_ibuf' [../../../../../data/../data/cells_cyclone_v.v:420]
+INFO: [VRFC 10-311] analyzing module cyclone10lp_io_obuf
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'cyclone10lp_io_obuf' [../../../../../data/../data/cells_cyclone_v.v:438]
+INFO: [VRFC 10-311] analyzing module cyclone10lp_clkena
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'cyclone10lp_clkena' [../../../../../data/../data/cells_cyclone_v.v:459]
+INFO: [VRFC 10-311] analyzing module cyclone10gx_lcell_comb
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'cyclone10gx_lcell_comb' [../../../../../data/../data/cells_cyclone_v.v:484]
+INFO: [VRFC 10-311] analyzing module cyclone10gx_io_ibuf
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'cyclone10gx_io_ibuf' [../../../../../data/../data/cells_cyclone_v.v:639]
+INFO: [VRFC 10-311] analyzing module cyclone10gx_io_obuf
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'cyclone10gx_io_obuf' [../../../../../data/../data/cells_cyclone_v.v:657]
+INFO: [VRFC 10-311] analyzing module cyclone10gx_clkena
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'cyclone10gx_clkena' [../../../../../data/../data/cells_cyclone_v.v:678]
+INFO: [VRFC 10-311] analyzing module VERIFIC_FADD
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'VERIFIC_FADD' [../../../../../data/../data/cells_verific.v:1]
+INFO: [VRFC 10-311] analyzing module VERIFIC_DFFRS
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'VERIFIC_DFFRS' [../../../../../data/../data/cells_verific.v:7]
+INFO: [VRFC 10-311] analyzing module IBUF
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'IBUF' [../../../../../data/../data/cells_xilinx_7.v:3]
+INFO: [VRFC 10-311] analyzing module OBUF
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'OBUF' [../../../../../data/../data/cells_xilinx_7.v:9]
+INFO: [VRFC 10-311] analyzing module OBUFT
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'OBUFT' [../../../../../data/../data/cells_xilinx_7.v:15]
+INFO: [VRFC 10-311] analyzing module GND
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'GND' [../../../../../data/../data/cells_xilinx_7.v:21]
+INFO: [VRFC 10-311] analyzing module INV
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'INV' [../../../../../data/../data/cells_xilinx_7.v:26]
+INFO: [VRFC 10-311] analyzing module LUT1
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'LUT1' [../../../../../data/../data/cells_xilinx_7.v:32]
+INFO: [VRFC 10-311] analyzing module LUT2
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'LUT2' [../../../../../data/../data/cells_xilinx_7.v:41]
+INFO: [VRFC 10-311] analyzing module LUT3
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'LUT3' [../../../../../data/../data/cells_xilinx_7.v:50]
+INFO: [VRFC 10-311] analyzing module LUT4
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'LUT4' [../../../../../data/../data/cells_xilinx_7.v:59]
+INFO: [VRFC 10-311] analyzing module LUT5
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'LUT5' [../../../../../data/../data/cells_xilinx_7.v:68]
+INFO: [VRFC 10-311] analyzing module LUT6
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'LUT6' [../../../../../data/../data/cells_xilinx_7.v:77]
+INFO: [VRFC 10-311] analyzing module MUXCY
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'MUXCY' [../../../../../data/../data/cells_xilinx_7.v:86]
+INFO: [VRFC 10-311] analyzing module MUXF7
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'MUXF7' [../../../../../data/../data/cells_xilinx_7.v:92]
+INFO: [VRFC 10-311] analyzing module MUXF8
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'MUXF8' [../../../../../data/../data/cells_xilinx_7.v:98]
+INFO: [VRFC 10-311] analyzing module VCC
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'VCC' [../../../../../data/../data/cells_xilinx_7.v:104]
+INFO: [VRFC 10-311] analyzing module XORCY
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'XORCY' [../../../../../data/../data/cells_xilinx_7.v:109]
+INFO: [VRFC 10-311] analyzing module CARRY4
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'CARRY4' [../../../../../data/../data/cells_xilinx_7.v:115]
+INFO: [VRFC 10-311] analyzing module FD_1
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'FD_1' [../../../../../data/../data/cells_xilinx_7.v:128]
+INFO: [VRFC 10-311] analyzing module FDC_1
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'FDC_1' [../../../../../data/../data/cells_xilinx_7.v:140]
+INFO: [VRFC 10-311] analyzing module FDCE_1
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'FDCE_1' [../../../../../data/../data/cells_xilinx_7.v:155]
+INFO: [VRFC 10-311] analyzing module FDCE
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'FDCE' [../../../../../data/../data/cells_xilinx_7.v:171]
+INFO: [VRFC 10-311] analyzing module FDCP_1
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'FDCP_1' [../../../../../data/../data/cells_xilinx_7.v:187]
+INFO: [VRFC 10-311] analyzing module FDCPE_1
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'FDCPE_1' [../../../../../data/../data/cells_xilinx_7.v:204]
+INFO: [VRFC 10-311] analyzing module FDCPE
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'FDCPE' [../../../../../data/../data/cells_xilinx_7.v:222]
+INFO: [VRFC 10-311] analyzing module FDCP
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'FDCP' [../../../../../data/../data/cells_xilinx_7.v:240]
+INFO: [VRFC 10-311] analyzing module FDC
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'FDC' [../../../../../data/../data/cells_xilinx_7.v:257]
+INFO: [VRFC 10-311] analyzing module FDDRCPE
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'FDDRCPE' [../../../../../data/../data/cells_xilinx_7.v:272]
+INFO: [VRFC 10-311] analyzing module FDDRRSE
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'FDDRRSE' [../../../../../data/../data/cells_xilinx_7.v:320]
+INFO: [VRFC 10-311] analyzing module FDE_1
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'FDE_1' [../../../../../data/../data/cells_xilinx_7.v:367]
+INFO: [VRFC 10-311] analyzing module FDE
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'FDE' [../../../../../data/../data/cells_xilinx_7.v:380]
+INFO: [VRFC 10-311] analyzing module FDP_1
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'FDP_1' [../../../../../data/../data/cells_xilinx_7.v:393]
+INFO: [VRFC 10-311] analyzing module FDPE_1
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'FDPE_1' [../../../../../data/../data/cells_xilinx_7.v:408]
+INFO: [VRFC 10-311] analyzing module FDPE
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'FDPE' [../../../../../data/../data/cells_xilinx_7.v:424]
+INFO: [VRFC 10-311] analyzing module FDP
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'FDP' [../../../../../data/../data/cells_xilinx_7.v:440]
+INFO: [VRFC 10-311] analyzing module FDR_1
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'FDR_1' [../../../../../data/../data/cells_xilinx_7.v:455]
+INFO: [VRFC 10-311] analyzing module FDRE_1
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'FDRE_1' [../../../../../data/../data/cells_xilinx_7.v:470]
+INFO: [VRFC 10-311] analyzing module FDRE
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'FDRE' [../../../../../data/../data/cells_xilinx_7.v:485]
+INFO: [VRFC 10-311] analyzing module FDRS_1
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'FDRS_1' [../../../../../data/../data/cells_xilinx_7.v:500]
+INFO: [VRFC 10-311] analyzing module FDRSE_1
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'FDRSE_1' [../../../../../data/../data/cells_xilinx_7.v:517]
+INFO: [VRFC 10-311] analyzing module FDRSE
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'FDRSE' [../../../../../data/../data/cells_xilinx_7.v:534]
+INFO: [VRFC 10-311] analyzing module FDRS
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'FDRS' [../../../../../data/../data/cells_xilinx_7.v:551]
+INFO: [VRFC 10-311] analyzing module FDR
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'FDR' [../../../../../data/../data/cells_xilinx_7.v:568]
+INFO: [VRFC 10-311] analyzing module FDS_1
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'FDS_1' [../../../../../data/../data/cells_xilinx_7.v:583]
+INFO: [VRFC 10-311] analyzing module FDSE_1
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'FDSE_1' [../../../../../data/../data/cells_xilinx_7.v:598]
+INFO: [VRFC 10-311] analyzing module FDSE
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'FDSE' [../../../../../data/../data/cells_xilinx_7.v:613]
+INFO: [VRFC 10-311] analyzing module FDS
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'FDS' [../../../../../data/../data/cells_xilinx_7.v:628]
+INFO: [VRFC 10-311] analyzing module FD
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'FD' [../../../../../data/../data/cells_xilinx_7.v:643]
+INFO: [VRFC 10-311] analyzing module LD_1
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'LD_1' [../../../../../data/../data/cells_xilinx_7.v:656]
+INFO: [VRFC 10-311] analyzing module LDC_1
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'LDC_1' [../../../../../data/../data/cells_xilinx_7.v:669]
+INFO: [VRFC 10-311] analyzing module LDCE_1
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'LDCE_1' [../../../../../data/../data/cells_xilinx_7.v:684]
+INFO: [VRFC 10-311] analyzing module LDCE
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'LDCE' [../../../../../data/../data/cells_xilinx_7.v:699]
+INFO: [VRFC 10-311] analyzing module LDCP_1
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'LDCP_1' [../../../../../data/../data/cells_xilinx_7.v:714]
+INFO: [VRFC 10-311] analyzing module LDCPE_1
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'LDCPE_1' [../../../../../data/../data/cells_xilinx_7.v:731]
+INFO: [VRFC 10-311] analyzing module LDCPE
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'LDCPE' [../../../../../data/../data/cells_xilinx_7.v:748]
+INFO: [VRFC 10-311] analyzing module LDCP
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'LDCP' [../../../../../data/../data/cells_xilinx_7.v:765]
+INFO: [VRFC 10-311] analyzing module LDC
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'LDC' [../../../../../data/../data/cells_xilinx_7.v:782]
+INFO: [VRFC 10-311] analyzing module LDE_1
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'LDE_1' [../../../../../data/../data/cells_xilinx_7.v:797]
+INFO: [VRFC 10-311] analyzing module LDE
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'LDE' [../../../../../data/../data/cells_xilinx_7.v:810]
+INFO: [VRFC 10-311] analyzing module LDP_1
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'LDP_1' [../../../../../data/../data/cells_xilinx_7.v:823]
+INFO: [VRFC 10-311] analyzing module LDPE_1
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'LDPE_1' [../../../../../data/../data/cells_xilinx_7.v:838]
+INFO: [VRFC 10-311] analyzing module LDPE
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'LDPE' [../../../../../data/../data/cells_xilinx_7.v:853]
+INFO: [VRFC 10-311] analyzing module LDP
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'LDP' [../../../../../data/../data/cells_xilinx_7.v:868]
+INFO: [VRFC 10-311] analyzing module LD
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'LD' [../../../../../data/../data/cells_xilinx_7.v:883]
+INFO: [VRFC 10-311] analyzing module BUFCF
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'BUFCF' [../../../../../data/../data/cells_xilinx_7.v:897]
+INFO: [VRFC 10-311] analyzing module BUFE
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'BUFE' [../../../../../data/../data/cells_xilinx_7.v:903]
+INFO: [VRFC 10-311] analyzing module BUFGCE_1
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'BUFGCE_1' [../../../../../data/../data/cells_xilinx_7.v:909]
+INFO: [VRFC 10-311] analyzing module BUFGCE
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'BUFGCE' [../../../../../data/../data/cells_xilinx_7.v:921]
+INFO: [VRFC 10-311] analyzing module BUFGCTRL
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'BUFGCTRL' [../../../../../data/../data/cells_xilinx_7.v:933]
+INFO: [VRFC 10-311] analyzing module BUFG_LB
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'BUFG_LB' [../../../../../data/../data/cells_xilinx_7.v:974]
+INFO: [VRFC 10-311] analyzing module BUFGMUX_1
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'BUFGMUX_1' [../../../../../data/../data/cells_xilinx_7.v:983]
+INFO: [VRFC 10-311] analyzing module BUFGMUX_CTRL
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'BUFGMUX_CTRL' [../../../../../data/../data/cells_xilinx_7.v:1016]
+INFO: [VRFC 10-311] analyzing module BUFGMUX
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'BUFGMUX' [../../../../../data/../data/cells_xilinx_7.v:1027]
+INFO: [VRFC 10-311] analyzing module BUFGMUX_VIRTEX4
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'BUFGMUX_VIRTEX4' [../../../../../data/../data/cells_xilinx_7.v:1060]
+INFO: [VRFC 10-311] analyzing module BUFGP
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'BUFGP' [../../../../../data/../data/cells_xilinx_7.v:1071]
+INFO: [VRFC 10-311] analyzing module BUFG
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'BUFG' [../../../../../data/../data/cells_xilinx_7.v:1077]
+INFO: [VRFC 10-311] analyzing module BUFHCE
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'BUFHCE' [../../../../../data/../data/cells_xilinx_7.v:1083]
+INFO: [VRFC 10-311] analyzing module BUFH
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'BUFH' [../../../../../data/../data/cells_xilinx_7.v:1107]
+INFO: [VRFC 10-311] analyzing module BUFIO2FB
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'BUFIO2FB' [../../../../../data/../data/cells_xilinx_7.v:1114]
+INFO: [VRFC 10-311] analyzing module BUFIODQS
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'BUFIODQS' [../../../../../data/../data/cells_xilinx_7.v:1129]
+INFO: [VRFC 10-311] analyzing module BUFIO
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'BUFIO' [../../../../../data/../data/cells_xilinx_7.v:1159]
+INFO: [VRFC 10-311] analyzing module BUFMRCE
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'BUFMRCE' [../../../../../data/../data/cells_xilinx_7.v:1165]
+INFO: [VRFC 10-311] analyzing module BUFMR
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'BUFMR' [../../../../../data/../data/cells_xilinx_7.v:1198]
+INFO: [VRFC 10-311] analyzing module BUFT
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'BUFT' [../../../../../data/../data/cells_xilinx_7.v:1207]
+INFO: [VRFC 10-311] analyzing module BUF
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'BUF' [../../../../../data/../data/cells_xilinx_7.v:1213]
+INFO: [VRFC 10-311] analyzing module $_DLATCH_N_
+WARNING: [VRFC 10-3609] overwriting previous definition of module '$_DLATCH_N_' [../../../../../data/../data/cells_yosys.v:3]
+INFO: [VRFC 10-311] analyzing module $_DLATCH_P_
+WARNING: [VRFC 10-3609] overwriting previous definition of module '$_DLATCH_P_' [../../../../../data/../data/cells_yosys.v:12]
+INFO: [VRFC 10-311] analyzing module top
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'top' [../../../../sim.srcs/sources_1/imports/vivado_project/syn_vivado.v:17]
+INFO: [VRFC 10-311] analyzing module testbench
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/zw/data/vivado_sim/vivado_sim/vivado_project/vivado_sim_test/sim.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/zw/data/vivado_sim/vivado_sim/vivado_project/vivado_sim_test/sim.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /home/zw/tools/Vivado/2023.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.GND
+Compiling module xil_defaultlib.VCC
+Compiling module xil_defaultlib.LDCE
+Compiling module xil_defaultlib.LUT6(INIT=64'b100101100110100101...
+Compiling module xil_defaultlib.IBUF
+Compiling module xil_defaultlib.OBUF
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.testbench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/zw/data/vivado_sim/vivado_sim/vivado_project/vivado_sim_test/sim.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_behav -key {Behavioral:sim_1:Functional:testbench} -tclbatch {testbench.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source testbench.tcl
+## current_wave_config
+0000000000
+0000000000
+0000000000
+0000000001
+0000000001
+0000000001
+0000000001
+0000000001
+0000000001
+0000000001
+0000000001
+0000000001
+0000000001
+0000000001
+0000000001
+0000000001
+0000000001
+0000000001
+0000000001
+0000000001
+0000000001
+$finish called at time : 210 ps : File "/home/zw/data/vivado_sim/vivado_sim/vivado_project/vivado_sim_test/sim.srcs/sim_1/imports/vivado_project/vivado_testbench.v" Line 40
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2081.105 ; gain = 61.262 ; free physical = 3325 ; free virtual = 9707
+INFO: [Common 17-206] Exiting Vivado at Thu May 16 16:01:28 2024...

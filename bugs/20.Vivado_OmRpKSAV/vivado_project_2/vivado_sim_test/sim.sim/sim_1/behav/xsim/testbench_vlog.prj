@@ -1,0 +1,9 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib "/home/zw/data/vivado_sim/vivado_sim/vivado_project_2/data/cells_verific.v" "/home/zw/data/vivado_sim/vivado_sim/vivado_project_2/data/cells_xilinx_7.v" "/home/zw/data/vivado_sim/vivado_sim/vivado_project_2/data/cells_cmos.v" "/home/zw/data/vivado_sim/vivado_sim/vivado_project_2/data/cells_cyclone_v.v" "/home/zw/data/vivado_sim/vivado_sim/vivado_project_2/data/cells_yosys.v" "/home/zw/data/vivado_sim/vivado_sim/vivado_project_2/vivado_sim_test/sim.srcs/sources_1/imports/vivado_project_2/syn_vivado.v" --include "../../../../../data" --include "../../../../sim.srcs/sources_1/imports/vivado_project_2" \
+"../../../../sim.srcs/sim_1/imports/vivado_project_2/vivado_testbench.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

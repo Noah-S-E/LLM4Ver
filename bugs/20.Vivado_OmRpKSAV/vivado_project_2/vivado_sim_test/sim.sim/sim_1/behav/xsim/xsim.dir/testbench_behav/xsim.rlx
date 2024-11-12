@@ -1,0 +1,12 @@
+
+{ 
+    crc :  6015122485766311146  , 
+    ccp_crc :  0  , 
+    cmdline : " --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl" , 
+    buildDate : "Oct 13 2023" , 
+    buildTime : "20:21:30" , 
+    linkCmd : "/usr/bin/gcc -Wa,-W  -O -fPIC  -m64  -Wl,--no-as-needed  -Wl,--unresolved-symbols=ignore-all  -o \"xsim.dir/testbench_behav/xsimk\"   \"xsim.dir/testbench_behav/obj/xsim_0.lnx64.o\" \"xsim.dir/testbench_behav/obj/xsim_1.lnx64.o\" -L\"/home/zw/tools/Vivado/2023.2/lib/lnx64.o\" -lrdi_simulator_kernel    -L/home/zw/tools/Vivado/2023.2/lib/lnx64.o/../../tps/lnx64/gcc-9.3.0/bin/../lib64 -Wl,--disable-new-dtags -Wl,-rpath=/home/zw/tools/Vivado/2023.2/lib/lnx64.o/../../tps/lnx64/gcc-9.3.0/bin/../lib64 -lrdi_simbridge_kernel" , 
+    aggregate_nets : 
+    [ 
+    ] 
+} 
