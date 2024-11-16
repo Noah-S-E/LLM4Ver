@@ -1,4 +1,4 @@
-# VerFuzzer
+# LLM4Ver
 ## [Generating Syntax Valid Verilog Designs with LLMs to Detect Compiler Defects in FPGA Logic Synthesis Tools](https://github.com/WeneneW/VerFuzzer)
 
 ***
