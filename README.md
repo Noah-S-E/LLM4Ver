@@ -69,14 +69,14 @@ The directory structure of the document is as follows. After adding the API, you
 ## These are the bugs we have discovered (./bugs)
 | ID    | Summary                                                                     | Software |
 |-------|-----------------------------------------------------------------------------|----------|
-| bug1  | Bit Operations Mishandles Empty String                                      | Yosys    |
-| bug2  | Netlist Discrepancies with Design                                           | Yosys    |
-| bug3  | Signed Keyword Handling Defect                                              | Yosys    |
-| bug4  | Abnormal Output                                                             | Yosys    |
-| bug5  | Port Declaration Syntax Error                                               | Yosys    |
-| bug6  | Incorrect Right Shift Operation                                             | Yosys    |
-| bug7  | Bidirectional Port Drive Assertion Error                                    | Iverilog |
-| bug8  | Assertion Error on Task Array Set                                           | Iverilog |
+| bug1  | Bit Operations Mishandles Empty String(https://github.com/YosysHQ/yosys/issues/4395)                                      | Yosys    |
+| bug2  | Netlist Discrepancies with Design(https://github.com/YosysHQ/yosys/issues/4398)                                           | Yosys    |
+| bug3  | Signed Keyword Handling Defect(https://github.com/YosysHQ/yosys/issues/4402)                                              | Yosys    |
+| bug4  | Abnormal Output(https://github.com/YosysHQ/yosys/issues/4407)                                                             | Yosys    |
+| bug5  | Port Declaration Syntax Error(https://github.com/YosysHQ/yosys/issues/4411)                                               | Yosys    |
+| bug6  | Incorrect Right Shift Operation(https://github.com/YosysHQ/yosys/issues/4413)                                             | Yosys    |
+| bug7  | Bidirectional Port Drive Assertion Error(https://github.com/steveicarus/iverilog/issues/1181)                                    | Iverilog |
+| bug8  | Assertion Error on Task Array Set(https://github.com/steveicarus/iverilog/issues/1183)                                           | Iverilog |
 | bug9  | Crash for PHYCLK GEN7                                                       | Quartus  |
 | bug10 | Crash for VRFX DDM                                                          | Quartus  |
 | bug11 | Segmentation Fault                                                          | Vivado   |
