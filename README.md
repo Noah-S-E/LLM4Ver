@@ -25,9 +25,9 @@ In modern electronic system design, the **logic synthesis** and **functional sim
 
 However, **logic synthesis tools and simulation tools may contain defects** that can cause the design to exhibit unexpected behavior when implemented in hardware, leading to serious consequences.
 
-### Our Solution: **VerFuzzer**
+### Our Solution: **LLM4Ver**
 
-We propose a novel fuzzing method named **VerFuzzer**, the **first fuzz testing tool** that leverages **prompting large language models** for generating valid **Verilog programs** to test logic synthesis tools.
+We propose a novel fuzzing method named **LLM4Ver**, the **first fuzz testing tool** that leverages **prompting large language models** for generating valid **Verilog programs** to test logic synthesis tools.
 
 
 ***
