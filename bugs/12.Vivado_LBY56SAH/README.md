@@ -15,6 +15,4 @@ synth_design -top top
 
 
 The crash phenomenon is as follows:
-![images](./output.png)
-The log file is as follows:
 ![images](./log.png)
