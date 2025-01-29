@@ -50,8 +50,8 @@ def generate_corre_AST(output_folder):
 
     completion = client.chat.completions.create(
         # model="gpt-3.5-turbo",
-        # model="gpt-4o-vision-preview",
-        model="gpt-4o",
+        # model="gpt-4o-2024-11-20-vision-preview",
+        model="gpt-4o-2024-11-20",
         messages=messages
     )
 

@@ -45,8 +45,8 @@ def generate_verilog_syntax_tree( verilog_syntax_tree=None):
 
     completion = client.chat.completions.create(
         # model="gpt-3.5-turbo",
-        # model="gpt-4o-vision-preview",
-        model="gpt-4o",
+        # model="gpt-4o-2024-11-20-vision-preview",
+        model="gpt-4o-2024-11-20",
         messages=messages
     )
 
@@ -107,8 +107,8 @@ def generate_supplemental_code(prompt):
 
     completion = client.chat.completions.create(
         # model="gpt-3.5-turbo",
-        # model="gpt-4o-vision-preview",
-        model="gpt-4o",
+        # model="gpt-4o-2024-11-20-vision-preview",
+        model="gpt-4o-2024-11-20",
         messages=messages
     )
 

@@ -16,8 +16,12 @@ def generate_equivalence_check_code(file_path):
 
     syn_content = read_file_content(file_path)
 
-    prompt = "Please write a verilog testbench code based on the above code"
+    # random signal input
+    prompt = "Please write a Verilog testbench based on the provided code, randomly assigning different values to the inputs and displaying the corresponding outputs. Additionally, start the testbench code with the line ` ```verilog ` to ensure proper formatting."
 
+    # timing signal variation
+    # prompt = "Please write a Verilog testbench based on the provided code, ensuring that all signals (including output signals) have clear initial values. Additionally, start the testbench code with the line ` ```verilog ` to ensure proper formatting. Please also make sure to display the output values whenever the signals change."
+    
     prompt = f"// File 1 Content:\n{syn_content}\n\n" + prompt
 
 
@@ -28,8 +32,8 @@ def generate_equivalence_check_code(file_path):
 
     completion = client.chat.completions.create(
         # model="gpt-3.5-turbo",
-        # model="gpt-4o-vision-preview",
-        model="gpt-4o",
+        # model="gpt-4o-2024-11-20-vision-preview",
+        model="gpt-4o-2024-11-20",
         messages=messages
     )
 
@@ -40,8 +44,8 @@ def generate_equivalence_check_code(file_path):
     testbench_code_content = f"""
     {completion_message.content}
     """
-    print(testbench_code_content)
-    print("\n\n")
+    # print(testbench_code_content)
+    # print("\n\n")
     return testbench_code_content
 
 def extract_testbench_code(output_folder):
@@ -64,8 +68,7 @@ def extract_testbench_code(output_folder):
 
     return testbench_code
 
-#
-# file_path = "../output/fuzz1/code/top.v"
+
 
 
 def simulation(output_folder):

@@ -8,7 +8,8 @@ from config_extract import *
 import sys
 
 def generate(file_path1, file_path2, output_folder):
-    print("### Verilog Generate ###\n\n")
+    
+    print("\n[ 75%] ███████████████████▋  Generating RTL")
 
 
     with open(file_path1, 'r') as file1, open(file_path2, 'r') as file2:
@@ -103,7 +104,8 @@ def generate(file_path1, file_path2, output_folder):
         #         with open(syn_identity_path, 'w') as syn_f:
         #             syn_f.write(supplemental_code)
 
-    print("### Verilog Generate Success ###\n\n")
+    print("[100%] ██████████████████████ Generation Success!\n")
+
 
 
 

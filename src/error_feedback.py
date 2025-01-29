@@ -12,7 +12,7 @@ def feedback(output_folder, str, number):
 
 
     if not os.path.exists(file_path):
-        print(f"文件 {file_path} 不存在.")
+        print(f"file {file_path} is not existent.")
         return
 
 
@@ -39,8 +39,8 @@ def feedback(output_folder, str, number):
 
     completion = client.chat.completions.create(
         # model="gpt-3.5-turbo",
-        # model="gpt-4o-vision-preview",
-        model="gpt-4o",
+        # model="gpt-4o-2024-11-20-vision-preview",
+        model="gpt-4o-2024-11-20",
         messages=messages
     )
 

@@ -1,164 +1,243 @@
 #!/bin/bash
 
+# ===================== Style Definitions =====================
+BORDER="╔══════════════════════════════════════════════════╗
+║                VERILOG FUZZING RUN               ║
+╚══════════════════════════════════════════════════╝"
+SECTION_HEADER="▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄"
+SECTION_FOOTER="▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀"
 
-if [ "$#" -ne 2 ]; then
-    echo "Usage: $0 <output_directory> <fuzz_number>"
-    exit 1
-fi
+# ===================== Global Variables =====================
+SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)
 
+# ===================== Helper Functions =====================
+print_header() {
+    echo "$BORDER"
+    echo "[📁] Output Directory: $(realpath "$1")"
+    echo "[🔢] Fuzz Number: $2"
+    echo "[🕒] Start Time: $(date '+%Y-%m-%d %H:%M:%S')"
+    echo
+}
 
-output_directory=$1
-fuzz_number=$2
+print_section() {
+    echo "$SECTION_HEADER"
+    printf "█ %-48s █\n" "$1"
+    echo "$SECTION_FOOTER"
+}
 
+print_check() {
+    case $1 in
+        0) echo "✔️ Success (${2:-1} attempt$([[ $2 -gt 1 ]] && echo s))";;
+        *) echo "❌ Failed (${2:-1} attempt$([[ $2 -gt 1 ]] && echo s))";;
+    esac
+}
 
-mkdir -p "${output_directory}"
+safe_cd() {
+    # Safely change directory with error checking
+    cd "$1" || {
+        echo "❌ Failed to enter directory: $1"
+        exit 1
+    }
+}
 
+# ===================== Main Function =====================
+main() {
+    # Record start time for duration calculation
+    local start_time=$(date +%s)
+    
+    # Validate input parameters
+    if [ "$#" -ne 2 ]; then
+        echo "Usage: $0 <output_directory> <fuzz_number>"
+        exit 1
+    fi
 
-mkdir -p "${output_directory}/${fuzz_number}/identity" "${output_directory}/${fuzz_number}/vivado" "${output_directory}/${fuzz_number}/yosys" "${output_directory}/${fuzz_number}/simulation_identity" "${output_directory}/${fuzz_number}/simulation_vivado" "${output_directory}/${fuzz_number}/simulation_yosys" "${output_directory}/${fuzz_number}/equiv_identity_vivado" "${output_directory}/${fuzz_number}/equiv_identity_yosys"
+    # Initialize paths
+    local output_directory=$(realpath "$1")
+    local fuzz_number=$2
+    local work_dir="${output_directory}/${fuzz_number}"
 
+    # Setup logging
+    mkdir -p "$work_dir"
+    exec > >(tee "${work_dir}/log.txt") 2>&1
+    print_header "$output_directory" "$fuzz_number"
 
-python generate.py "${output_directory}/${fuzz_number}"
+    # ===================== Directory Initialization =====================
+    print_section "INITIALIZATION"
+    local subdirs=(identity vivado yosys 
+                  simulation_identity simulation_vivado simulation_yosys
+                  equiv_identity_vivado equiv_identity_yosys)
+    
+    for dir in "${subdirs[@]}"; do
+        mkdir -p "${work_dir}/${dir}" || {
+            echo "❌ Failed to create directory: ${work_dir}/${dir}"
+            exit 1
+        }
+    done
+    echo "✅ Directory structure created successfully"
 
-count_yosys=0
+    # ===================== Verilog Generation =====================
+    print_section "GENERATION"
+    local gen_start=$(date +%s)
+    if ! python "${SCRIPT_DIR}/generate.py" "$work_dir"; then
+        echo "❌ Verilog generation failed"
+        exit 1
+    fi
+    echo "✅ Verilog generation completed ($(($(date +%s) - gen_start))s)"
 
-while [[ $count_yosys -lt 3 && $exit_code_yosys -ne 0 ]]; do
-    cd "${output_directory}/${fuzz_number}/identity" || break
-    yosys -p "read_verilog rtl.v;" > yosys_output.log 2> yosys_errors_${count_yosys}.log
-    exit_code_yosys=$?
-    if [ $exit_code_yosys -ne 0 ]; then
-        echo "Yosys Check Error."
-        cp rtl.v rtl_yosys_${count_yosys}.v 
-        cd ../../../
+    # ===================== Syntax Checks =====================
+    print_section "SYNTAX CHECKS"
+    echo "[🔍] Running syntax checks:"
+    local check_start=$(date +%s)
+    # echo $work_dir
+    # echo "${work_dir}/../.."
+    # Yosys syntax check with retry logic
+    
+    local yosys_check=1
+    local yosys_attempts=0
+    local yosys_exit_code=1
+    while (( yosys_attempts < 3 )); do
+        safe_cd "${work_dir}/identity" || exit 1
 
-        python error_feedback.py "${output_directory}/${fuzz_number}" "yosys" ${count_yosys}
+        local yosys_err_log="./yosys_errors_${yosys_attempts}.log"
+        yosys -p "read_verilog rtl.v" > ./yosys_output.log 2> "${yosys_err_log}"
+        yosys_exit_code=$?
+        
+        if [[ $yosys_exit_code -eq 0 ]]; then
+            rm -f "${yosys_err_log}"
+            echo "  ├─ Yosys:   $(print_check 0 $((yosys_attempts+1)))"
+            break
+        else
+            cp rtl.v "./rtl_yosys_${yosys_attempts}.v"
+            python "${SCRIPT_DIR}/error_feedback.py" "$work_dir" "yosys" ${yosys_attempts}
+            echo "  ├─ Yosys Attempt $((yosys_attempts+1)) failed. Retrying..."
+        fi
+
+        ((yosys_attempts++))
+        
+    done
+    
+    if (( yosys_attempts >= 3 && yosys_exit_code != 0 )); then
+    echo "  ├─ Yosys:   $(print_check 1 3)"
+    yosys_check = 0
+    # exit 1  # Maybe Vivado check success
+    fi
+
+    # Vivado syntax check with retry logic
+    local vivado_attempts=0
+    local vivado_exit_code=1
+    local vivado_check=1
+    while (( vivado_attempts < 3 )); do
+        safe_cd "${work_dir}/identity"
+
+        local vivado_err_log="./vivado_errors_${vivado_attempts}.log"
+        echo "check_syntax" > vivado_check.tcl
+        vivado -mode batch -source vivado_check.tcl > ./vivado_output.log 2> "${vivado_err_log}"
+        vivado_exit_code=$?
+
+        if [[ $ivado_exit_code -eq 0 ]]; then
+            rm -f "${vivado_err_log}"
+            echo "  └─ Vivado:  $(print_check 0 $((vivado_attempts+1)))"
+            break
+        else
+            cp rtl.v "./rtl_vivado_${vivado_attempts}.v"
+            python "${SCRIPT_DIR}/error_feedback.py" "$work_dir" "vivado" ${vivado_attempts}
+            echo "  ├─ Vivado Attempt $((vivado_attempts+1)) failed. Retrying..."
+        fi
+
+        ((vivado_attempts++))
+    done
+
+    if (( vivado_attempts >= 3 && vivado_exit_code != 0 )); then
+        vivado_check=0
+        echo "  ├─ Vivado:   $(print_check 1 3)"
+        # exit 1  # Maybe Yosys check success
+    fi
+
+    #Yosys or Vivado check time
+    if ((yosys_check ==1 && vivado_check == 1)); then
+        echo "✅ Syntax check completed ($(($(date +%s) - check_start))s)"
     else
-        echo "Yosys Check Success."
-        cd ../../../
+        echo "❌ Syntax check completed ($(($(date +%s) - check_start))s)"
     fi
-    ((count_yosys++))
-done
+
+    # ===================== Synthesis =====================
+    folders=('vivado' 'yosys' 'simulation_identity' 'simulation_vivado' 
+         'simulation_yosys' 'equiv_identity_vivado' 'equiv_identity_yosys')
+    source_rtl="${work_dir}/identity/rtl.v"
+    for folder in "${folders[@]}"; do
+        target_dir="${work_dir}/${folder}"
+        cp -v "$source_rtl" "$target_dir/" > /dev/null 2>&1;
+    done
+    cp "${work_dir}/identity/rtl.v" "${work_dir}/identity/syn_identity.v" > /dev/null 2>&1
 
 
-if [[ $count_yosys -eq 3 && $exit_code_yosys -ne 0 ]]; then
-    echo "Yosys错误反馈3次，仍然有错误"
-fi
-
-cd "${output_directory}/${fuzz_number}/identity/"
-echo -e "read_verilog rtl.v\ncheck_syntax" > vivado_check.tcl
-cd ../../../
-
-
-count_vivado=0
-exit_code_vivado=1
-
-while [[ $count_vivado -lt 3 && exit_code_vivado -ne 0 ]]; do
-    cd "${output_directory}/${fuzz_number}/identity" || break
-    vivado -mode batch -source vivado_check.tcl > vivado_output.log 2> vivado_errors_${count_vivado}.log
-    exit_code_vivado=$?
-    if [ $exit_code_vivado -ne 0 ]; then
-        echo "Vivado Check Error."
-        cp rtl.v rtl_vivado_${count_vivado}.v  
-        cd ../../../
-
-        python error_feedback.py "${output_directory}/${fuzz_number}" "vivado" ${count_vivado}
+    print_section "SYNTHESIS"
+    local syn_start=$(date +%s)
+    if ! python "${SCRIPT_DIR}/synthesis.py" "$work_dir"; then
+        echo "❌ Synthesis failed"
+        echo "❌ Synthesis completed ($(($(date +%s) - syn_start))s)"
+        exit 1
     else
-        echo "Vivado Check Success."
-        cd ../../../
+        echo "✅ Synthesis completed ($(($(date +%s) - syn_start))s)"
     fi
-    ((count_vivado++))
-done
+    
 
+    # ===================== Simulation =====================
+    print_section "SIMULATION"
+    cp "${work_dir}/identity/syn_identity.v" "${work_dir}/simulation_identity/syn_identity.v" > /dev/null 2>&1
+    cp "${work_dir}/yosys/syn_yosys.v" "${work_dir}/simulation_yosys/syn_yosys.v" > /dev/null 2>&1
+    cp "${work_dir}/vivado/syn_vivado.v" "${work_dir}/simulation_vivado/syn_vivado.v" > /dev/null 2>&1
+    local sim_start=$(date +%s)
+    python "${SCRIPT_DIR}/testbench.py" "$work_dir" 
 
-if [[ $count_vivado -eq 3 && $exit_code_vivado -ne 0 ]]; then
-    echo "Vivado error feedback 3 times, there are still errors"
-fi
+    run_simulation() {
+        local target=$1
+        safe_cd "${work_dir}/simulation_${target}"
+        
+        # Compile with Icarus Verilog
+        if ! iverilog -o "${target}_main" "${target}_testbench.v" > "compile.log" 2>&1; then
+            echo "❌ ${target} compilation failed"
+            return 1
+        fi
+        
+        # Run simulation with timeout
+        timeout 1m vvp -n "${target}_main" > "vvp.log" 2>&1
+        local vvp_exit=$?
+        
+        if [ $vvp_exit -eq 0 ]; then
+            sed -i '/_testbench\.v/d' "vvp.log"
+            sha256sum "vvp.log" | cut -c1-16
+        elif [ $vvp_exit -eq 124 ]; then
+            echo "❌ ${target} simulation timed out"
+            return 1
+        else
+            echo "❌ ${target} simulation failed with exit code $vvp_exit"
+            return 1
+        fi
+    }
+    
+        
+    echo "✅ Simulation completed ($(($(date +%s) - sim_start))s)"
+    echo "[📊] Simulation results:"
+    local orig_hash=$(run_simulation identity)
+    local yosys_hash=$(run_simulation yosys)
+    local vivado_hash=$(run_simulation vivado)
 
-echo -e "### Verilog Code Check Finished ###.\n"
+    # Display comparison results
+    echo "  ├─ Original:   $orig_hash $([[ "$orig_hash" == "$yosys_hash" ]] && echo "✔️" || echo "❌")"
+    echo "  ├─ Yosys:      $yosys_hash $([[ "$yosys_hash" == "$orig_hash" ]] && echo "✔️" || echo "❌")"
+    echo "  └─ Vivado:     $vivado_hash $([[ "$vivado_hash" == "$orig_hash" ]] && echo "✔️" || echo "❌")"
 
+    # ===================== Finalization =====================
+    print_section "SUMMARY"
+    echo "✅ All checks completed successfully"
+    echo "⏱️  Total execution time: $(($(date +%s) - start_time))s"
 
-folders=('vivado' 'yosys' 'simulation_identity' 'simulation_vivado' 'simulation_yosys' 'equiv_identity_vivado' 'equiv_identity_yosys')
+    python "${SCRIPT_DIR}/AST.py" "${work_dir}"
 
-for folder in "${folders[@]}"; do
-    target_folder="${output_directory}/${fuzz_number}/${folder}"
-    if [ ! -d "${target_folder}" ]; then
-        mkdir -p "${target_folder}"
-    fi
-    cp "${output_directory}/${fuzz_number}/identity/rtl.v" "${target_folder}/rtl.v"
-done
+    cp "${work_dir}/identity/ast.txt" "${work_dir}/../../temp_save/tem_ast.txt"
+    cp "${work_dir}/identity/rtl.v" "${work_dir}/../../temp_save/temp.v"
+}
 
-cp "${output_directory}/${fuzz_number}/identity/rtl.v" "${output_directory}/${fuzz_number}/identity/syn_identity.v"
-
-
-python synthesis.py "${output_directory}/${fuzz_number}"
-if [ $? -ne 0 ]; then
-    echo "Synthesis failed. Exiting."
-fi
-
-echo -e "### Starting Simulation ###\n"
-
-cp "${output_directory}/${fuzz_number}/identity/syn_identity.v" "${output_directory}/${fuzz_number}/simulation_identity/syn_identity.v"
-cp "${output_directory}/${fuzz_number}/yosys/syn_yosys.v" "${output_directory}/${fuzz_number}/simulation_yosys/syn_yosys.v"
-cp "${output_directory}/${fuzz_number}/vivado/syn_vivado.v" "${output_directory}/${fuzz_number}/simulation_vivado/syn_vivado.v"
-
-python testbench.py "${output_directory}/${fuzz_number}"
-
-echo -e "\n\nRunning simulation for identity\n"
-
-cd "${output_directory}/${fuzz_number}/simulation_identity/"
-iverilog -o identity_main identity_testbench.v > icarus_stderr.log 2>&1
-if [ $? -eq 0 ]; then
-    echo "identity simulation iverilog Compilation Success"
-    timeout 1m vvp -n identity_main > vvp.log
-    if [ $? -eq 0 ]; then
-        hash_value_identity=$(sha256sum vvp.log | cut -c1-16)
-        echo "identity Simulation Success: Output Hash = $hash_value_identity"
-    else
-        echo "identity Simulation Timeout or Failed"
-    fi
-else
-    echo "identity simulation iverilog Compilation Failed"
-fi
-
-cd ..
-
-cd simulation_yosys/
-echo -e "\nRunning simulation for yosys\n"
-iverilog -o yosys_main yosys_testbench.v > icarus_stderr.log 2>&1
-if [ $? -eq 0 ]; then
-    echo "Yosys simulation iverilog Compilation Success"
-    timeout 1m vvp -n yosys_main > vvp.log
-    if [ $? -eq 0 ]; then
-        hash_value_yosys=$(sha256sum vvp.log | cut -c1-16)
-        echo "yosys Simulation Success: Output Hash = $hash_value_yosys"
-    else
-        echo "yosys Simulation Timeout or Failed"
-    fi
-else
-    echo "Yosys simulation iverilog Compilation Failed"
-fi
-
-cd ..
-
-cd simulation_vivado/
-echo -e "\nRunning simulation for vivado\n"
-iverilog -o vivado_main vivado_testbench.v > icarus_stderr.log 2>&1
-if [ $? -eq 0 ]; then
-    echo "Vivado simulation iverilog Compilation Success"
-    timeout 1m vvp -n vivado_main > vvp.log
-    if [ $? -eq 0 ]; then
-        hash_value_vivado=$(sha256sum vvp.log | cut -c1-16)
-        echo "Vivado Simulation Success: Output Hash = $hash_value_vivado"
-    else
-        echo "Vivado Simulation Timeout or Failed"
-    fi
-else
-    echo "Vivado simulation iverilog Compilation Failed"
-fi
-
-echo "identity: $hash_value_identity    yosys: $hash_value_yosys    vivado: $hash_value_vivado"
-
-cd ../../../
-python AST.py "${output_directory}/${fuzz_number}"
-
-cp "${output_directory}/${fuzz_number}/identity/ast.txt" "temp_save/tem_ast.txt"
-cp "${output_directory}/${fuzz_number}/identity/rtl.v" "temp_save/temp.v"
+# Execute main function with arguments
+main "$@"

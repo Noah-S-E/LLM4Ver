@@ -1,1 +1,29 @@
-
+    verilog_syntax_tree:
+                   Module
+                   |
+                   |-- Identifier: 
+                   |
+                   |-- Port List
+                   |   |
+                   |   |-- Input: 
+                   |   |-- Input: 
+                   |   |-- Output:
+                   |
+                   |-- Always Block
+                       |
+                       |-- Sensitivity List
+                       |   |
+                       |   |-- Posedge: 
+                       |   |-- Posedge: 
+                       |
+                       |-- If Statement
+                           |
+                           |-- Condition: 
+                           |
+                           |-- True Statement:
+                           |
+                           |-- False Statement:
+                   ...
+           end
+                   
+end

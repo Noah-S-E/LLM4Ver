@@ -1,6 +1,9 @@
 import os
 import subprocess
 
+class VivadoSynthesisError(Exception):
+    """Vivado synthesis process failed"""
+    pass
 
 class Vivado:
     def __init__(self, vivado_bin=None, vivado_desc="vivado", vivado_output="syn_vivado.v"):
@@ -31,29 +34,41 @@ class Vivado:
     #         print("Synthesis failed:", result.stderr)
     #     else:
     #         print("Synthesis succeeded")
-    def run_synth(self, top, v_file, output_dir):  
-        vivado_tcl = os.path.join(output_dir, f"vivado_{top}.tcl") 
-
-        with open(vivado_tcl, 'w') as f:
-            f.write(self.vivado_synthesis_config(top))  
-
-        subprocess.run(["sed", "s/^module/(* use_dsp48=\"no\" *) (* use_dsp=\"no\" *) module/;", "-i", v_file])
-        vivado_bin = self.vivado_bin if self.vivado_bin else "vivado"
-
-
-        os.chdir(output_dir)
-        vivado_tcl = f"vivado_{top}.tcl"
-
+    def run_synth(self, top, v_file, output_dir):
         try:
-            result = subprocess.run([vivado_bin, "-mode", "batch", "-source", vivado_tcl], capture_output=True,
-                                    text=True)
-            result.check_returncode() 
-        except subprocess.CalledProcessError as e:
-            print("### Vivado Synthesis Error ###\n\n", e.stderr)
-            raise  # Re-raise the exception
+            if not os.path.exists(v_file):
+                raise FileNotFoundError(f"Verilog file {v_file} not found")
 
-        print("### Vivado Synthesis Success ###\n")
-        print("### Finished synthesis with Vivado ###\n")
+            os.makedirs(output_dir, exist_ok=True)
+
+            vivado_tcl = os.path.join(output_dir, f"vivado_{top}.tcl")
+            with open(vivado_tcl, 'w') as f:
+                f.write(self.vivado_synthesis_config(top))
+
+            sed_cmd = ["sed", "-i", "s/^module/(* use_dsp48=\"no\" *) (* use_dsp=\"no\" *) module/;", v_file]
+            subprocess.run(sed_cmd, check=True)  
+
+            os.chdir(output_dir)
+
+            vivado_bin = self.vivado_bin if self.vivado_bin else "vivado"
+            cmd = [vivado_bin, "-mode", "batch", "-source", vivado_tcl]
+
+            result = subprocess.run(
+                cmd,
+                capture_output=True,
+                text=True,
+                check=True  
+            )
+
+            log_file = os.path.join(output_dir, "vivado_synth.log")
+            with open(log_file, "w") as f:
+                f.write(result.stdout)
+
+            return 0
+
+        except subprocess.CalledProcessError as e:
+            error_msg = f"Vivado Error (code {e.returncode}):\n{e.stderr}"
+            raise VivadoSynthesisError(error_msg) from e
 
 
     def vivado_synthesis_config(self, top):
